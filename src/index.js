@@ -1,17 +1,21 @@
-const nameInput = document.querySelector('.name-input');
-const scoreInput = document.querySelector('.score-input');
+import { postData, nameInput, scoreInput } from './modules/postScore.js';
+import getScore from './modules/getScoreAPI.js';
+
 const submitBtn = document.querySelector('.submit-btn');
+const refreshBtn = document.querySelector('.refresh-btn');
 const ulElement = document.querySelector('.render-score');
 
-const renderInput = () => {
-  const myName = nameInput.value;
-  const myScore = scoreInput.value;
-  const liElement = document.createElement('li');
-  liElement.innerHTML = `<span>${myName}</span>:<span>${myScore}`;
-  ulElement.append(liElement);
-};
-
-submitBtn.addEventListener('click', (e) => {
+refreshBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  renderInput();
+  getScore();
+  ulElement.innerHTML = '';
 });
+
+submitBtn.addEventListener('click', async (e) => {
+  e.preventDefault();
+  await postData();
+  nameInput.value = '';
+  scoreInput.value = '';
+});
+
+getScore();

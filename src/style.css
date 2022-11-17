@@ -4,9 +4,18 @@
   padding: 0;
 }
 
+h1 {
+  padding: 3rem;
+}
+
 .container {
   display: flex;
   justify-content: space-around;
+}
+
+.refresh-btn,
+button {
+  padding: 0.2rem;
 }
 
 .form {
@@ -17,10 +26,12 @@
 
 .form > input {
   padding: 0.3rem;
+  width: 100%;
 }
 
 .form > button {
   padding: 0.3rem;
+  align-self: flex-end;
 }
 
 .score-board {
@@ -45,4 +56,35 @@ li:nth-child(even) {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.r-score {
+  display: flex;
+  gap: 5rem;
+}
+
+@media screen and (max-width: 370px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 3rem;
+  }
+
+  .right-side {
+    order: 1;
+    margin-bottom: 4rem;
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .submit-btn {
+    align-self: flex-end;
+  }
+
+  .r-score {
+    justify-content: space-between;
+  }
 }
