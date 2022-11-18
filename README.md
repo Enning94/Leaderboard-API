@@ -11,8 +11,7 @@ This project is a Leaderboard-List app, built to display a game score board. The
 
 ## Live Demo (if available)
 
-N/A
-
+[Live Demo](https://enning94.github.io/Leaderboard-API/dist)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
