@@ -72,7 +72,6 @@ button:active {
 }
 
 .score-board {
-  border: 0.4rem solid rgb(103, 100, 100);
   margin-top: 0.5rem;
 }
 
@@ -148,7 +147,7 @@ h1 {
 }
 
 .gif {
-  width: 40%;
+  width: 100%;
   height: auto;
   border: 0;
 }
@@ -177,7 +176,11 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1023px) { .heading { flex-direction: column; } }
+@media screen and (max-width: 1023px) {
+  .heading {
+    flex-direction: column;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .container {
@@ -220,6 +223,10 @@ h1 {
   button {
     padding: 0.3rem;
     font-size: small;
+  }
+
+  .msg-div {
+    display: none;
   }
 }
 
