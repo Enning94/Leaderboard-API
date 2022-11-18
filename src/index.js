@@ -7,8 +7,8 @@ const ulElement = document.querySelector('.render-score');
 
 refreshBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  getScore();
   ulElement.innerHTML = '';
+  getScore();
 });
 
 submitBtn.addEventListener('click', async (e) => {
@@ -17,5 +17,3 @@ submitBtn.addEventListener('click', async (e) => {
   nameInput.value = '';
   scoreInput.value = '';
 });
-
-getScore();
