@@ -11,7 +11,7 @@ const getScore = async () => {
   scoreBoard.forEach((scoreLine) => {
     const { user, score } = scoreLine;
     const liElement = document.createElement('li');
-    liElement.innerHTML = `<span>${user}</span>:<span>${score}</span>`;
+    liElement.innerHTML = `<span>${user}</span><span>:${score}</span>`;
     ulElement.append(liElement);
   });
 };

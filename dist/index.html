@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LeaderBoard-App</title>
-<script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
-<body>
-    <h1>Leaderboard</h1>
-    <div class="container">
-
-        <div class="left-side">
-            <div class="r-score">
-                <span>Recent scores</span>
-                <span class="refresh-btn"><button type="button">Refresh</button></span>
-            </div>
-            <div class="score-board">
-                <ul class="render-score">
-                    
-                </ul>
-            </div>
-        </div>
-
-        <div class="right-side">
-            <div class="add-score">
-                <span>Add your score</span>
-            </div>
-            <div>
-                <form action="submit" class="form">
-                    <input type="text" placeholder="Your Name" class="name-input" required>
-                    <input type="text" placeholder="Your Score" class="score-input" required>
-                    <button class="submit-btn" type="submit">Submit</button>
-                </form>
-            </div>
-
-
-        </div>
+  <script defer src="main.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div class="heading">
+      <div class="center">
+        <iframe class="gif"
+          src="https://giphy.com/embed/lSacRlCCSU0GZ1mws7"
+        ></iframe>
+      </div>
+      <h1>Leaderboard</h1>
+      <div class="center">
+        <iframe class="gif"
+          src="https://giphy.com/embed/lSacRlCCSU0GZ1mws7"
+        ></iframe>
+      </div>
     </div>
+    <div class="msg-div"><h3 class="board-msg">Welcome to the Score Board</h3></div>
+    <div class="container">
+      <div class="left-side">
+        <div class="r-score">
+          <h2 class="title">Recent scores</h2>
+          <span class="refresh-btn"
+            ><button type="button">Refresh</button></span
+          >
+        </div>
+        <div class="score-board">
+          <ul class="render-score"></ul>
+        </div>
+      </div>
 
-</body>
+      <div class="right-side">
+        <div class="add-score">
+          <h2 class="title">Add your score</h2>
+        </div>
+        <div>
+          <form action="submit" class="form">
+            <input
+              type="text"
+              placeholder="Your Name"
+              class="name-input"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Your Score"
+              class="score-input"
+              required
+            />
+            <button class="submit-btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

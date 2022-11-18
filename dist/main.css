@@ -7,9 +7,41 @@
   padding: 0;
 }
 
+body {
+  background-color: rgb(32, 9, 53);
+}
+
 .container {
   display: flex;
   justify-content: space-around;
+  background-color: rgb(32, 9, 53);
+  color: white;
+  height: 100vh;
+}
+
+.refresh-btn,
+button {
+  padding: 0.5rem;
+  font-size: larger;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+button {
+  background-color: rgba(116, 123, 246, 0.655);
+  border: none;
+  box-shadow: 0 3px rgb(192, 160, 160);
+  color: white;
+}
+
+button:hover {
+  background-color: #0d21b9;
+}
+
+button:active {
+  background-color: rgba(116, 123, 246, 0.655);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .form {
@@ -20,16 +52,28 @@
 
 .form > input {
   padding: 0.3rem;
+  background-image: url(22d06deb0f9cf4735316.png);
   width: 100%;
+  font-size: larger;
+  color: white;
+}
+
+.form > input::placeholder {
+  color: rgb(208, 198, 198);
+  font-style: italic;
+  font-size: medium;
 }
 
 .form > button {
-  padding: 0.3rem;
-    align-self: flex-end;
+  padding: 0.5rem;
+  align-self: flex-end;
+  font-size: larger;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
 .score-board {
-  border: 0.1rem solid rgba(95, 91, 91, 0.214);
+  border: 0.4rem solid rgb(255, 255, 255);
   margin-top: 0.5rem;
 }
 
@@ -38,46 +82,150 @@
 }
 
 li {
-  padding: 0.3rem;
-  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 1rem 0.3rem 2rem;
+
+  /* padding-left: 3rem; */
+
+  /* font-weight: 600; */
+  font-size: larger;
+}
+
+li:nth-child(odd) {
+  background-color: rgb(145, 96, 5);
 }
 
 li:nth-child(even) {
-  background-color: rgba(178, 178, 178, 0.41);
+  background-image: url(22d06deb0f9cf4735316.png);
 }
 
 .left-side {
   display: flex;
   flex-direction: column;
+
+  /* justify-content: space-around; */
+}
+
+.r-score {
+  display: flex;
+  gap: 5rem;
+  padding: 1rem;
+}
+
+.add-score {
+  padding: 1rem;
+}
+
+.heading {
+  display: flex;
   justify-content: space-around;
-}
-.r-score{
-    display: flex;
-    gap: 5rem;
-}
-.refresh-btn, button{
-   padding: 0.2rem;
+  flex-wrap: wrap;
+
+  /* padding: 1rem; */
+  background-color: rgb(145, 96, 5);
+  color: white;
+
+  /* padding-bottom: 100rem; */
 }
 
-@media screen and (max-width: 370px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-margin: 3rem;
-      }
-      .right-side{
-        order: 1;
-       margin-bottom: 4rem;
-      }
-      .left-side{
-        order: 2;
-      }
+.heading,
+h1 {
+  align-self: center;
+  padding: 1rem;
+  font-size: 4rem;
+  text-align: center;
+  color: rgba(255, 0, 0, 0.833);
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  text-decoration: underline;
+}
 
-      .submit-btn{
-        align-self: flex-end;
-      }
-      .r-score{
-        justify-content: space-between;
-      }
+.title {
+  padding-right: 1rem;
+  font-size: 2rem;
+  color: red;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.center {
+  width: auto;
+  height: auto;
+}
+
+.gif {
+  width: fit-content;
+  height: auto;
+  border: 0;
+}
+
+.msg-div {
+  height: 3rem;
+  background-image: url(22d06deb0f9cf4735316.png);
+}
+
+.board-msg {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  animation: board-msg 10s infinite;
+}
+
+@keyframes board-msg {
+  from {
+    width: 30%;
   }
+
+  to {
+    width: 225%;
+  }
+}
+
+@media screen and (max-width: 1023px) { .heading { flex-direction: column; } }
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 3rem;
+  }
+
+  .right-side {
+    order: 1;
+    margin-bottom: 4rem;
+  }
+
+  .left-side {
+    order: 2;
+  }
+
+  .submit-btn {
+    align-self: flex-end;
+  }
+
+  .r-score {
+    justify-content: space-between;
+  }
+
+  .center {
+    display: none;
+  }
+
+  .gif {
+    width: auto;
+
+    /* height: "auto"; */
+    border: 0;
+  }
+
+  .heading,
+  h1 {
+    font-size: 3rem;
+  }
+
+  .refresh-btn,
+  button {
+    padding: 0.3rem;
+    font-size: small;
+  }
+}
+
